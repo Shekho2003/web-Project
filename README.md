@@ -1,6 +1,3 @@
-<div align="center">
-<img width="1229" height="869" alt="54354" src="https://github.com/user-attachments/assets/a9ad96dd-99ec-4a8d-89d2-5f8b41490887" />
-
 # 🎬 **Sinema ve İzleyici Segmentasyonu (V2.0)**  
 ## 🔍 **Araştırma Soruları**
 
@@ -49,7 +46,7 @@ Toplam **40.000 YouTube yorumu** analiz edilmiştir.
 | 🍅 Olumsuz (Eleştiri) | 4.656 | %11.6 |
 | 😐 Nötr / Kararsız | 18.919 | %47.3 |
 
-
+<img width="1229" height="869" alt="54354" src="https://github.com/user-attachments/assets/b544361f-bc8a-4da7-acf6-c339e31aea96" />
 
 > **Yorumların %41’i olumlu, %11’i olumsuzdur.**  
 > İzleyicilerin çoğu filmi analitik ve temkinli bir biçimde değerlendirmiştir.
@@ -58,14 +55,15 @@ Toplam **40.000 YouTube yorumu** analiz edilmiştir.
 
 ### 🧭 **İzleyici Segmentlerinin Davranış Profili**
 
+<img width="1243" height="916" alt="687687" src="https://github.com/user-attachments/assets/15751cb1-8fe1-4581-839a-2a5e703db3dd" />
+
+
 | Segment | Pozitif | Negatif | Özellik |
 |:--|:--:|:--:|:--|
 | 👥 Genel İzleyici | 6.474 | 1.602 | Beklenti, tepki, genel görüş |
 | ⚡ Görsel/Aksiyon Sever | 2.389 | 501 | Efekt, sahne, aksiyon odaklı |
 | 🎬 Sinefil | 1.638 | 418 | Senaryo, karakter derinliği |
 | 🌟 Fan Kitlesi | — | — | Oyuncu ve karakter sadakati |
-
-![Genel Duygu Dağılımı](./Ekran%20Görüntüsü%20(47).png)
 
 > **Fan Kitlesi** duygusal yoğunluğu en yüksek gruptur.  
 > **Sinefiller** ise analitik-eleştirel yaklaşımıyla film derinliğine odaklanır.
@@ -97,15 +95,23 @@ Her segment farklı duygusal ve tematik önceliklere sahiptir.
 
 ---
 
-## ⚙️ **Kullanılan Teknolojiler**
+## 5 ⚙️ **Kullanılan Teknolojiler**
+- **Python** — temel programlama dili
+**Google YouTube Data API** — YouTube yorumlarını çekmek için
+**Pandas** — yorumları tablo halinde kaydetmek için
+**TQDM** — veri çekim sürecinde işlem çubuğu göstermek için
+---
+🎯 **Sonuç:**  
+Bu proje, YouTube’daki 40.000 film yorumunu analiz ederek izleyici gruplarının **duygusal ve davranışsal çeşitliliğini** ortaya koymuştur.  
 
-<p align="center">
-<img src="https://img.shields.io/badge/Python-blue?logo=python&logoColor=white"/>
-<img src="https://img.shields.io/badge/YouTube%20Data%20API-red?logo=youtube"/>
-<img src="https://img.shields.io/badge/Pandas%20%26%20Matplotlib-green"/>
-<img src="https://img.shields.io/badge/TQDM-gray"/>
-</p>
+- **Genel İzleyici**: Tepki ve beklenti odaklıdır.  
+- **Aksiyon Sever**: Görsel kaliteye en duyarlı gruptur.  
+- **Sinefiller**: Analitik ve eleştirel yaklaşımı temsil eder.  
+- **Fan Kitlesi**: Sadakat ve pozitif duygunun merkezindedir.  
 
+💬 **Sonuç olarak:**  
+Film pazarlamasında “tek sesli kampanyalar” yerine, **her izleyici segmentine özel iletişim dili** geliştirilmelidir.  
+Bu yaklaşım, hem marka değerini hem de izleyici etkileşimini güçlendirecektir.
 ---
 
 ## 📁 **Proje Dosyaları**
