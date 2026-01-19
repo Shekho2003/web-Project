@@ -112,6 +112,7 @@ Bu proje, YouTube’daki 40.000 film yorumunu analiz ederek izleyici grupların�
 💬 **Sonuç olarak:**  
 Film pazarlamasında “tek sesli kampanyalar” yerine, **her izleyici segmentine özel iletişim dili** geliştirilmelidir.  
 Bu yaklaşım, hem marka değerini hem de izleyici etkileşimini güçlendirecektir.
+
 ---
 
 ## 📁 **Proje Dosyaları**
