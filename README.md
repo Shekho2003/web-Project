@@ -48,7 +48,7 @@ Toplam **40.000 YouTube yorumu** analiz edilmiştir.
 | 🍅 Olumsuz (Eleştiri) | 4.656 | %11.6 |
 | 😐 Nötr / Kararsız | 18.919 | %47.3 |
 
-![Genel Duygu Dağılımı](./Ekran%20Görüntüsü%20(47).png)
+
 
 > **Yorumların %41’i olumlu, %11’i olumsuzdur.**  
 > İzleyicilerin çoğu filmi analitik ve temkinli bir biçimde değerlendirmiştir.
