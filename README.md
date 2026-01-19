@@ -1,149 +1,115 @@
-🎬 Sinema ve İzleyici Segmentasyonu (V2.0 – YouTube Yorum Analizi)
-🔍 Araştırma Soruları
+<div align="center">
 
-Bu proje aşağıdaki üç temel soruya yanıt aramaktadır:
+# 🎬 **Sinema ve İzleyici Segmentasyonu (V2.0)**  
+## 🔍 **Araştırma Soruları**
 
-Filmimizi kimler izliyor ve yorum yapıyor?
-(Sinefiller mi, fan kitlesi mi, yoksa sadece genel izleyiciler mi?)
+> 🎯 Bu proje, izleyici davranışlarını anlamak ve film pazarlama stratejilerini veriyle güçlendirmek amacıyla üç temel soruya odaklanır:
 
-Pazarlama kampanyasında hangi unsuru öne çıkarmalıyız?
-(Senaryo derinliği mi, yoksa görsel efektlerin kalitesi mi?)
+1. **Filmimizi kimler izliyor ve yorum yapıyor?**  
+   (Sinefiller mi, fan kitlesi mi, yoksa genel izleyiciler mi?)  
+2. **Kampanyalarda hangi öge öne çıkarılmalı?**  
+   (Senaryo derinliği mi, yoksa görsel efektler mi?)  
+3. **Sadık kitlemizin ortak özellikleri nelerdir?**
 
-Sadık izleyici gruplarının ortak özellikleri nelerdir?
+---
 
-📌 Proje Özeti
+## 🧠 **Proje Özeti**
 
-Bu proje, YouTube üzerindeki film yorumlarını analiz ederek sinema izleyicilerini duygusal eğilim ve segment profiline göre sınıflandırmaktadır.
-Amaç, izleyicilerin filmi hangi yönleriyle değerlendirdiğini ve pazarlama stratejilerinin buna nasıl uyarlanabileceğini ortaya koymaktır.
+🎥 Bu çalışma, **YouTube** üzerindeki film yorumlarını analiz ederek, izleyici gruplarının **duygusal eğilimlerini** ve **segment profillerini** ortaya çıkarmaktadır.  
+Amaç, bir filmin kimler tarafından, hangi gerekçelerle beğenildiğini veya eleştirildiğini anlamaktır.  
 
-Veriler, YouTube API aracılığıyla toplanmış ve Python dili kullanılarak işlenmiştir.
-Yapay zekâ destekli metin analizi ile yorumlar dört temel kategoriye ayrılmıştır:
+💡 Yapay zekâ destekli analiz sonucunda izleyiciler dört ana kategoriye ayrılmıştır:
+- 🎬 **Sinefil / Hikaye Odaklı**  
+- ⚡ **Görsel / Aksiyon Sever**  
+- 🌟 **Fan Kitlesi / Oyuncu Odaklı**  
+- 👥 **Genel İzleyici (Hype/Tepki)**  
 
-Sinefil / Hikaye Odaklı
+---
 
-Görsel / Aksiyon Sever
+## 📊 **1. Yöntem ve Veri Süreci**
 
-Fan Kitlesi / Oyuncu Odaklı
+| Aşama | Açıklama |
+|:--|:--|
+| 🧩 **Veri Toplama** | YouTube API ile **40.000** film yorumu toplanmıştır. |
+| 🧮 **Duygu Analizi** | TextBlob ve kelime tabanlı sınıflandırmayla pozitif, negatif, nötr olarak etiketlenmiştir. |
+| 🎭 **Segmentasyon** | Yorum kelimelerine göre 4 ana izleyici grubu belirlenmiştir. |
+| 📈 **Raporlama** | Pandas & Matplotlib ile sonuçlar tablo ve grafik olarak sunulmuştur. |
 
-Genel İzleyici (Hype/Tepki)
+---
 
-🧩 1. Yöntem ve Veri Süreci
-Aşama	Açıklama
-Aşama 1: Veri Toplama	YouTube API ile 40.000 film yorumu toplanmıştır. Her yorum için tarih, beğeni sayısı, dil ve yazar bilgisi kaydedilmiştir.
-Aşama 2: Duygu Analizi	TextBlob ve kelime tabanlı sınıflandırma yöntemiyle yorumlar pozitif, negatif ve nötr olarak etiketlenmiştir.
-Aşama 3: İzleyici Segmentasyonu	Yorum metinlerinde geçen kelimelere göre izleyiciler dört segmente ayrılmıştır.
-Aşama 4: Raporlama ve Görselleştirme	Pandas ve Matplotlib ile sonuçlar tablo ve grafik formatında raporlanmıştır.
-📊 2. Bulgular ve Görseller
-🎞️ Genel Duygu Dağılımı
+## 💬 **2. Bulgular ve Görseller**
 
-Toplam 40.000 YouTube yorumu analiz edilmiştir.
+### 🎞️ **Genel Duygu Dağılımı**
+Toplam **40.000 YouTube yorumu** analiz edilmiştir.
 
-Duygu	Yorum Sayısı	Oran
-🍿 Olumlu (Beğeni)	16.425	%41.1
-🍅 Olumsuz (Eleştiri)	4.656	%11.6
-😐 Nötr / Kararsız	18.919	%47.3
+| Duygu | Yorum Sayısı | Oran |
+|:--|:--|:--|
+| 🍿 Olumlu (Beğeni) | 16.425 | %41.1 |
+| 🍅 Olumsuz (Eleştiri) | 4.656 | %11.6 |
+| 😐 Nötr / Kararsız | 18.919 | %47.3 |
 
-📈 Grafik 1: Genel Duygu Dağılımı
+<p align="center">
+  <img src="grafik1_v2.png" width="450" alt="Grafik 1: Genel Duygu Dağılımı"/>
+</p>
 
+> **Yorumların %41’i olumlu, %11’i olumsuzdur.**  
+> İzleyicilerin çoğu filmi analitik ve temkinli bir biçimde değerlendirmiştir.
 
-Yorumların %41,1’i olumlu, %11,6’sı olumsuz, %47,3’ü nötr tondadır.
-Bu durum, izleyicilerin büyük kısmının filmi analitik biçimde değerlendirdiğini göstermektedir.
+---
 
-🧠 İzleyici Segmentlerinin Davranış Profili
+### 🧭 **İzleyici Segmentlerinin Davranış Profili**
 
-📈 Grafik 2: İzleyici Segmentlerinin Davranış Profili (Radar Analizi)
+| Segment | Pozitif | Negatif | Özellik |
+|:--|:--:|:--:|:--|
+| 👥 Genel İzleyici | 6.474 | 1.602 | Beklenti, tepki, genel görüş |
+| ⚡ Görsel/Aksiyon Sever | 2.389 | 501 | Efekt, sahne, aksiyon odaklı |
+| 🎬 Sinefil | 1.638 | 418 | Senaryo, karakter derinliği |
+| 🌟 Fan Kitlesi | — | — | Oyuncu ve karakter sadakati |
 
+<p align="center">
+  <img src="grafik2_radar_v2.png" width="480" alt="Grafik 2: Radar Analizi"/>
+</p>
 
-Segment	Pozitif Yorum Sayısı	Negatif Yorum Sayısı	Belirgin Özellik
-Genel İzleyici (Hype/Tepki)	6.474	1.602	Beklenti, tepki, genel görüş
-Görsel / Aksiyon Sever	2.389	501	Efekt, sahne, aksiyon odaklı
-Sinefil / Hikaye Odaklı	1.638	418	Senaryo ve karakter derinliği
-Fan Kitlesi / Oyuncu Odaklı	—	—	Oyuncular, karakter sadakati
+> **Fan Kitlesi** duygusal yoğunluğu en yüksek gruptur.  
+> **Sinefiller** ise analitik-eleştirel yaklaşımıyla film derinliğine odaklanır.
 
-Genel izleyici ve aksiyon sever grupları en yüksek pozitif oranlara sahiptir.
-Sinefiller ise eleştirel eğilimleriyle denge unsuru oluşturur.
+---
 
-💡 3. Stratejik Yorumlar ve Öneriler
+## 💡 **3. Stratejik Çıkarımlar**
 
-İzleyici kitlesi tek tip değildir; her segment farklı duygusal ve tematik beklentilere sahiptir.
+✅ **İzleyici kitlesi tek tip değildir.**  
+Her segment farklı duygusal ve tematik önceliklere sahiptir.
 
-Fan kitlesi, en yüksek sadakat ve duygusal bağlılığı gösteren segmenttir.
+🎯 **Kampanya önerileri:**
+- Aksiyon Sever → Görsel kalite ve tempo vurgusu  
+- Sinefil → Hikaye anlatımı ve derinlik  
+- Fan Kitlesi → Oyuncu, karakter ve duygusal bağlılık  
 
-Sinefiller senaryo derinliğine, Aksiyon Severler ise görselliğe önem vermektedir.
+📊 **Veri temelli kişiselleştirme**, film pazarlamasında başarı oranını artırır.
 
-Veri temelli pazarlama, her izleyici segmenti için özelleştirilmiş iletişim dili gerektirir.
+---
 
-Film kampanyalarında:
+## 🔭 **4. Gelecek Çalışmalar İçin Öneriler**
 
-Aksiyon severler için görsel kalite ve tempo,
+| Alan | Açıklama |
+|:--|:--|
+| ⏳ **Zaman Serisi Analizi** | Film vizyon öncesi ve sonrası duygu değişimleri incelenebilir. |
+| 🎞️ **Tür Bazlı Segmentasyon** | Türlere göre izleyici farkları araştırılabilir. |
+| 🌐 **Platform Genişletme** | Gelecekte TikTok, X (Twitter) veya IMDb verileri eklenebilir. |
+| 🧠 **Derin Öğrenme Analizi** | İroni, nostalji, hayal kırıklığı gibi duygular tespit edilebilir. |
 
-Sinefiller için hikaye anlatımı,
+---
 
-Fan kitlesi için karakter ve oyuncu vurgusu ön plana çıkarılmalıdır.
+## ⚙️ **Kullanılan Teknolojiler**
 
-🔭 4. Gelecek Çalışmalar İçin Öneriler
+<p align="center">
+<img src="https://img.shields.io/badge/Python-blue?logo=python&logoColor=white"/>
+<img src="https://img.shields.io/badge/YouTube%20Data%20API-red?logo=youtube"/>
+<img src="https://img.shields.io/badge/Pandas%20%26%20Matplotlib-green"/>
+<img src="https://img.shields.io/badge/TQDM-gray"/>
+</p>
 
-Zaman Serisi Analizi:
-Film vizyon öncesi ve sonrası duygu değişimleri incelenebilir.
+---
 
-Tür Bazlı Segmentasyon:
-Aksiyon, dram ve bilim kurgu türlerinde izleyici farkları araştırılabilir.
+## 📁 **Proje Dosyaları**
 
-Platform Genişletme:
-Bu proje yalnızca YouTube verisine dayanmaktadır.
-Gelecekte TikTok, X (Twitter) ve IMDb verileriyle genişletilebilir.
-
-Derin Öğrenme Duygu Analizi:
-İroni, nostalji, hayal kırıklığı gibi karmaşık duygular derin modellerle tespit edilebilir.
-
-🛠️ 5. Kullanılan Teknolojiler
-
-Python
-
-Google YouTube Data API
-
-Pandas
-
-Matplotlib
-
-TQDM
-
-👨‍💻 6. Proje Dosyaları
-📂 SinemaSegmentAnalizi_V2/
- ├── cinema_analysis_v2.py         # Güncellenmiş analiz scripti
- ├── grafik1_v2.png                # Genel Duygu Dağılımı
- ├── grafik2_radar_v2.png          # Davranış Profili (Radar)
- ├── Sinema_Analiz_1768835096.xlsx # Çıktı verisi
- ├── README.md                     # Bu dosya
-
-🏁 7. Genel Sonuç
-
-Bu proje, YouTube’daki 40.000 film yorumunun analiz edilmesiyle,
-izleyici gruplarının duygusal eğilimlerini ve davranışsal profillerini ortaya koymuştur.
-
-Genel izleyici ve aksiyon severler pozitif eğilimli kitleyi oluştururken,
-sinefiller analitik-eleştirel dengeyi,
-fan kitlesi ise en yüksek sadakati temsil etmektedir.
-
-Sonuç olarak, sinema sektöründe veri destekli segment bazlı kampanyalar,
-izleyici memnuniyetini ve etkileşimi artırmak için güçlü bir araçtır.
-
-📎 Görselleri GitHub’a yüklerken:
-
-grafik1_v2.png → Grafik 1 (Genel Duygu Dağılımı)
-
-grafik2_radar_v2.png → Grafik 2 (Radar Analizi)
-
-README’nin ilgili kısımlarına şu şekilde ekleyebilirsin:
-
-![Grafik 1](grafik1_v2.png)
-![Grafik 2](grafik2_radar_v2.png)
-
-✅ Minimum Başarı Kriteri Karşılaştırması
-Kriter	Hedef	Durum
-Veri kaynağı	En az 1 sosyal medya platformu	✅ YouTube
-Duygu analizi	Pozitif/Negatif/Nötr sınıflandırma	✅ Var
-Segmentasyon	Kullanıcı gruplarının belirlenmesi	✅ 4 segment
-Görsel içerik	En az 1 grafik	✅ 2 profesyonel grafik
-Raporlama	Açıklayıcı metin + sonuç + öneri	✅ Eksiksiz
-Gelecek çalışmalar	Araştırma vizyonu	✅ Yazılmış
