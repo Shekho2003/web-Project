@@ -64,9 +64,7 @@ Toplam **40.000 YouTube yorumu** analiz edilmiştir.
 | 🎬 Sinefil | 1.638 | 418 | Senaryo, karakter derinliği |
 | 🌟 Fan Kitlesi | — | — | Oyuncu ve karakter sadakati |
 
-<p align="center">
-  <img src="grafik2_radar_v2.png" width="480" alt="Grafik 2: Radar Analizi"/>
-</p>
+![Genel Duygu Dağılımı](./Ekran%20Görüntüsü%20(47).png)
 
 > **Fan Kitlesi** duygusal yoğunluğu en yüksek gruptur.  
 > **Sinefiller** ise analitik-eleştirel yaklaşımıyla film derinliğine odaklanır.
