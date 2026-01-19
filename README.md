@@ -1,4 +1,5 @@
 <div align="center">
+<img width="1229" height="869" alt="54354" src="https://github.com/user-attachments/assets/a9ad96dd-99ec-4a8d-89d2-5f8b41490887" />
 
 # 🎬 **Sinema ve İzleyici Segmentasyonu (V2.0)**  
 ## 🔍 **Araştırma Soruları**
